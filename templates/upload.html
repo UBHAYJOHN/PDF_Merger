@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Merge PDFs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload PDF files to merge</h1>
+        <form action="/merge" method="post" enctype="multipart/form-data">
+            <label for="file1">File 1:</label>
+            <input type="file" id="file1" name="file1" accept=".pdf"><br><br>
+            
+            <label for="file2">File 2:</label>
+            <input type="file" id="file2" name="file2" accept=".pdf"><br><br>
+            
+            <input type="submit" value="Merge PDFs">
+        </form>
+    </div>
+</body>
+</html>
